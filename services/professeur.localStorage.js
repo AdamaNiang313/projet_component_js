@@ -7,3 +7,5 @@ export function saveDataProf(newProf) {
     professeurs.push(newProf);
     localStorage.setItem("professeurs", JSON.stringify(professeurs));
 }
+
+

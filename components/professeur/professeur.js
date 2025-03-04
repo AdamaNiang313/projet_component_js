@@ -9,6 +9,9 @@ const tbody = document.getElementById("tbodyProfs");
 const checkboxMatieres =  document.querySelectorAll("input[type=checkbox]");
 load();
 
+console.log(professeurs);
+
+
 /*
 const nomElem = form.elements["nom"];
 const prenomElem = document.getElementById("prenom");
@@ -75,8 +78,7 @@ form.addEventListener("submit", (e) => {
 
 });
 
-function load() {
-    alert("professeur")
+ function load() {
     professeurs = ServiceLocalStorage.loadData();
     Component.closeForm(form);
     Component.activateFocus();
@@ -96,22 +98,6 @@ function load() {
 // Fonction d'affichage des messages de succès ou d"erreur sur les champs
 
 
-
-
-
-
-
-
-
 document.getElementById("btnOpenForm").addEventListener("click", ()=>{Component.openForm(form)});
 document.getElementById("closeForm").addEventListener("click", ()=>{Component.closeForm(form)});
-
-
-
-
-
-
-
-
-
 

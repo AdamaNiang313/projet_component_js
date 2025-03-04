@@ -1,3 +1,4 @@
+
 const links = document.getElementsByClassName("nav-link");
 
 const container = document.getElementById('container');
@@ -27,20 +28,23 @@ function loadJs(path) {
     script.type = 'module';
     script.onload = ()=>{
         
-        
     }
     //document.getElementsByTagName('body')[0];
     document.body.appendChild(script);
     
 }
 
+
 function activeLink() {
     for (const link of links) {
         link.addEventListener("click",()=>{
             let path = link.getAttribute('data-path');
             loadTemplate(path);
-            
+            window.location.href = "http://127.0.0.1:5503/index1.html";  // Redirige vers une autre URL
             loadJs(path);
+            
         })
     }
 }
+
+
